@@ -1,0 +1,9 @@
+Package:
+ name: 'fbterm'
+ download_source: 'wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/fbterm/fbterm-1.7.0.tar.gz -O fbterm-1.7.tar.gz'
+ expects_source: 'fbterm-1.7.tar.gz'
+ files:
+  centos:
+   '7.2':
+    spec: 'centOS/7.2/fbterm.spec'
+    build_files: 'centOS/7.2/SOURCES'

@@ -1,4 +1,4 @@
-%global commit          eaaddb6b7ab31c5fd71db37d0f681bd6a88c2e22
+%global commit          617a91762714f1c1d997e67142e4b2c6eea651cf
 %global shortcommit     %(c=%{commit}; echo ${c:0:7})
 %global gitcommittag    .git%{shortcommit}
 
@@ -315,7 +315,7 @@ Group: System Environment/Kernel
 License: GPLv2
 URL: http://www.kernel.org/
 Version: 4.10.0
-Release: 3%{?prerelease}%{gitcommittag}%{?dist}
+Release: 4%{?prerelease}%{gitcommittag}%{?dist}
 # DO NOT CHANGE THE 'ExclusiveArch' LINE TO TEMPORARILY EXCLUDE AN ARCHITECTURE BUILD.
 # SET %%nobuildarches (ABOVE) INSTEAD
 ExclusiveArch: noarch i686 x86_64 ppc ppc64 ppc64le s390 s390x %{arm} ppcnf ppc476
@@ -1695,6 +1695,14 @@ fi
 
 
 %changelog
+* Fri Feb 24 2017 fabianorosas <farosas@farosas> - 4.10.0-4.git617a917
+- 617a91762714f1c1d997e67142e4b2c6eea651cf PCI: A fix for caculating bridge windows size and alignment
+- 3212c4c3f81860c073d8ddd50e068cf4847fe069 powerpc: Add POWER9 architected mode to cputable
+- 152490356ea89026dd2665bb4670d95dc89cadee powerpc/64: Fix checksum folding in csum_add
+- b0b8bcc67ead2e486dca161a7aa27ac67495d263 powerpc/64: Clear UPRT on POWER9 when initializing HPT
+- a136365d53aef9a6a43f16f0fadf0529123b0a34 powerpc: P9 DD1 SLB invalidate workaround with P8 mode fix
+- 0330b51a096dc55c255be2dcfcd729381b8fdb36 powerpc/mm: Update PROTFAULT handling in the page fault path
+
 * Wed Feb 22 2017 OpenPOWER Host OS Builds Bot <open-power-host-os-builds-bot@users.noreply.github.com> - 4.10.0-3.giteaaddb6
 - eaaddb6b7ab31c5fd71db37d0f681bd6a88c2e22 powernv: Pass PSSCR value and mask to power9_idle_stop
 - 4bfb3830d13ed553d9adf0621f34440669b2e8e0 cpuidle:powernv: Add helper function to populate powernv idle states.

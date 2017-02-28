@@ -1,4 +1,4 @@
-%global commit          bb80805d7d5b14e886e769b5938b459a3592d882
+%global commit          a6ef3e6d8783a5feb1dbb9d5c4c68c2552cdea4b
 %global shortcommit     %(c=%{commit}; echo ${c:0:7})
 %global gitcommittag    .git%{shortcommit}
 
@@ -190,7 +190,7 @@
 Summary: QEMU is a FAST! processor emulator
 Name: qemu
 Version: 2.8.0
-Release: 1%{gitcommittag}%{?dist}
+Release: 2%{gitcommittag}%{?dist}
 Epoch: 15
 License: GPLv2+ and LGPLv2+ and BSD
 Group: Development/Tools
@@ -1530,6 +1530,10 @@ getent passwd qemu >/dev/null || \
 %endif
 
 %changelog
+* Tue Feb 28 2017 fabianorosas <> - 15:2.8.0-2.gita6ef3e6
+- a6ef3e6d8783a5feb1dbb9d5c4c68c2552cdea4b memory: Introduce DEVICE_HOST_ENDIAN for ram device
+- 988829739e415805e9cc2642110f92c6cd43350a sysemu: support up to 1024 vCPUs
+
 * Tue Feb 14 2017 Olav Philipp Henschel <olavph@linux.vnet.ibm.com> - 15:2.8.0-1.gitbb80805
 - Version update
 - Removed files qemu-tech.html and qmp-commands.txt that are not generated anymore

@@ -4,7 +4,7 @@
 
 Name:           SLOF
 Version:        20170303
-Release:        2%{gitcommittag}%{?dist}
+Release:        3%{gitcommittag}%{?dist}
 Summary:        Slimline Open Firmware
 
 License:        BSD
@@ -58,6 +58,9 @@ cp -a boot_rom.bin $RPM_BUILD_ROOT%{_datadir}/qemu/slof.bin
 
 
 %changelog
+* Sun Jul 23 2017 Builds Bot <bot@email.com> - 20170303-3.git
+- Updating to c39657a board_qemu: move code out of fdt-fix-node-phandle
+
 * Wed Mar 15 2017 OpenPOWER Host OS Builds Bot <open-power-host-os-builds-bot@users.noreply.github.com> - 20170303-2.git1903174
 - 1903174472f8800caf50c959b304501b4c01153c pci: force minimum mem bar alignment
   of 64K for board-qemu

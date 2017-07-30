@@ -5,7 +5,7 @@
 
 Name: open-power-host-os
 Version: 2.5
-Release: 17%{?milestone_tag}%{dist}
+Release: 18%{?milestone_tag}%{dist}
 Summary: OpenPOWER Host OS metapackages
 Group: System Environment/Base
 License: GPLv3
@@ -59,7 +59,7 @@ Requires(post): flannel = 0.5.5-1.gitcb8284f%{dist}
 Requires(post): kubernetes = 1.2.0-0.21.git4a3f9c5%{dist}
 Requires(post): skopeo = 0.1.20-1.gite802625%{dist}
 Requires: %{name}-virt = %{version}-%{release}
-Requires(post): SLOF = 20170303-2.git1903174%{dist}
+Requires(post): SLOF = 20170303-3.gitc39657a%{dist}
 Requires(post): libvirt = 3.2.0-3.gitf81f00f%{dist}
 Requires(post): qemu = 15:2.9.0-5.git4cfb657%{dist}
 Requires: %{name}-virt-management = %{version}-%{release}
@@ -128,7 +128,7 @@ Summary: OpenPOWER Host OS hypervisor packages
 Requires: %{name}-base = %{version}-%{release}
 Requires(post): kernel = 4.11.0-7.gitd255e14%{dist}
 
-Requires(post): SLOF = 20170303-2.git1903174%{dist}
+Requires(post): SLOF = 20170303-3.gitc39657a%{dist}
 Requires(post): libvirt = 3.2.0-3.gitf81f00f%{dist}
 Requires(post): qemu = 15:2.9.0-5.git4cfb657%{dist}
 
@@ -143,7 +143,7 @@ Summary: OpenPOWER Host OS hypervisor management packages
 Requires: %{name}-base = %{version}-%{release}
 Requires(post): kernel = 4.11.0-7.gitd255e14%{dist}
 Requires: %{name}-virt = %{version}-%{release}
-Requires(post): SLOF = 20170303-2.git1903174%{dist}
+Requires(post): SLOF = 20170303-3.gitc39657a%{dist}
 Requires(post): libvirt = 3.2.0-3.gitf81f00f%{dist}
 Requires(post): qemu = 15:2.9.0-5.git4cfb657%{dist}
 
@@ -243,6 +243,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Sun Jul 30 2017 Builds Bot <bot@email.com> - 2.5-18
+- Update package dependencies
+
 * Wed Jul 12 2017 OpenPOWER Host OS Builds Bot <open-power-host-os-builds-bot@users.noreply.github.com> - 2.5-17
 - Update package dependencies
 

@@ -241,8 +241,8 @@
 
 Summary: Library providing a simple virtualization API
 Name: libvirt
-Version: 3.2.0
-Release: 4%{?extraver}%{gitcommittag}%{?dist}
+Version: 3.6.0
+Release: 1%{?extraver}%{gitcommittag}%{?dist}
 License: LGPLv2+
 Group: Development/Libraries
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
@@ -2063,6 +2063,10 @@ exit 0
 
 
 %changelog
+* Fri Aug 11 2017 Builds Bot <bot@email.com> - 3.6.0-1.git
+- Version update
+- Updating to 40c1264 Merge branch hostos-devel of https://github.com/open-power-host-os/libvirt into v3.6.0
+
 * Mon Aug 07 2017 Fabiano Rosas <farosas@linux.vnet.ibm.com> - 3.2.0-4.git
 - Add extraver macro to Release field
 

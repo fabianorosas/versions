@@ -241,8 +241,8 @@
 
 Summary: Library providing a simple virtualization API
 Name: libvirt
-Version: 3.2.0
-Release: 3%{gitcommittag}%{?dist}
+Version: 3.6.0
+Release: 1%{gitcommittag}%{?dist}
 License: LGPLv2+
 Group: Development/Libraries
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
@@ -2063,6 +2063,10 @@ exit 0
 
 
 %changelog
+* Tue Aug 15 2017 Builds Bot <bot@email.com> - 3.6.0-1.git
+- Version update
+- Updating to 40c1264 Merge branch hostos-devel of https://github.com/open-power-host-os/libvirt into v3.6.0
+
 * Wed Jun 14 2017 OpenPOWER Host OS Builds Bot <open-power-host-os-builds-bot@users.noreply.github.com> - 3.2.0-3.git
 - Updating to f81f00f util: hostcpu: Correctly report total number of vcpus in
   virHostCPUGetMap

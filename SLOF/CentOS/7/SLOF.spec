@@ -3,8 +3,8 @@
 %global gitcommittag    .git%{shortcommit}
 
 Name:           SLOF
-Version:        20170303
-Release:        3%{gitcommittag}%{?dist}
+Version:        20170724
+Release:        1%{gitcommittag}%{?dist}
 Summary:        Slimline Open Firmware
 
 License:        BSD
@@ -58,6 +58,10 @@ cp -a boot_rom.bin $RPM_BUILD_ROOT%{_datadir}/qemu/slof.bin
 
 
 %changelog
+* Tue Aug 15 2017 Builds Bot <bot@email.com> - 20170724-1.git
+- Version update
+- Updating to 685af54 virtio-net: rework the driver to support multiple open
+
 * Tue Jul 18 2017 Murilo Opsfelder Araújo <muriloo@linux.vnet.ibm.com> - 20170303-3.gitc39657a
 - c39657a5f7d502c132a4ae7f407f8281a2ce68e4 board_qemu: move code out of fdt-fix-node-phandle
 - 4c345ef71ecab658a17020c7780dd5a7d01029bf board_qemu: drop unused values early in fdt-fix-node-phandle

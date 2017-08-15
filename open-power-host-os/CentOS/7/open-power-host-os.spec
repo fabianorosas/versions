@@ -5,7 +5,7 @@
 
 Name: open-power-host-os
 Version: 3.0
-Release: 1%{?milestone_tag}%{dist}
+Release: 2%{?milestone_tag}%{dist}
 Summary: OpenPOWER Host OS metapackages
 Group: System Environment/Base
 License: GPLv3
@@ -59,8 +59,8 @@ Requires(post): flannel = 0.5.5-1.gitcb8284f%{dist}
 Requires(post): kubernetes = 1.2.0-0.21.git4a3f9c5%{dist}
 Requires(post): skopeo = 0.1.20-1.gite802625%{dist}
 Requires: %{name}-virt = %{version}-%{release}
-Requires(post): SLOF = 20170303-3.gitc39657a%{dist}
-Requires(post): libvirt = 3.2.0-3.gitf81f00f%{dist}
+Requires(post): SLOF = 20170724-1.gitc39657a%{dist}
+Requires(post): libvirt = 3.6.0-1.gitf81f00f%{dist}
 Requires(post): qemu = 15:2.9.0-5.git4cfb657%{dist}
 Requires: %{name}-virt-management = %{version}-%{release}
 Requires(post): novnc = 0.5.1-5.gitfc00821%{dist}
@@ -128,8 +128,8 @@ Summary: OpenPOWER Host OS hypervisor packages
 Requires: %{name}-base = %{version}-%{release}
 Requires(post): kernel = 4.13.0-1.rc3.gitec0d270%{dist}
 
-Requires(post): SLOF = 20170303-3.gitc39657a%{dist}
-Requires(post): libvirt = 3.2.0-3.gitf81f00f%{dist}
+Requires(post): SLOF = 20170724-1.gitc39657a%{dist}
+Requires(post): libvirt = 3.6.0-1.gitf81f00f%{dist}
 Requires(post): qemu = 15:2.9.0-5.git4cfb657%{dist}
 
 %description virt
@@ -143,8 +143,8 @@ Summary: OpenPOWER Host OS hypervisor management packages
 Requires: %{name}-base = %{version}-%{release}
 Requires(post): kernel = 4.13.0-1.rc3.gitec0d270%{dist}
 Requires: %{name}-virt = %{version}-%{release}
-Requires(post): SLOF = 20170303-3.gitc39657a%{dist}
-Requires(post): libvirt = 3.2.0-3.gitf81f00f%{dist}
+Requires(post): SLOF = 20170724-1.gitc39657a%{dist}
+Requires(post): libvirt = 3.6.0-1.gitf81f00f%{dist}
 Requires(post): qemu = 15:2.9.0-5.git4cfb657%{dist}
 
 Requires(post): novnc = 0.5.1-5.gitfc00821%{dist}
@@ -243,6 +243,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue Aug 15 2017 Builds Bot <bot@email.com> - 3.0-2.alpha
+- Update package dependencies
+
 * Wed Aug 02 2017 OpenPOWER Host OS Builds Bot <open-power-host-os-builds-bot@users.noreply.github.com> - 3.0-1.alpha
 - Update package dependencies
 

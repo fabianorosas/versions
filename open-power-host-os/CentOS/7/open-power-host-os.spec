@@ -5,7 +5,7 @@
 
 Name: open-power-host-os
 Version: 3.0
-Release: 18%{?milestone_tag}%{dist}
+Release: 19%{?milestone_tag}%{dist}
 Summary: OpenPOWER Host OS metapackages
 Group: System Environment/Base
 License: GPLv3
@@ -50,26 +50,26 @@ BuildRequires: policycoreutils-python
 Summary: OpenPOWER Host OS full package set
 
 Requires: %{name}-base = %{version}-%{release}
-Requires(post): kernel = 4.13.0-4%{?extraver}.git49564cb%{dist}
+Requires(post): kernel = 4.14.0-1%{?extraver}.git68b4afb%{dist}
 Requires: %{name}-container = %{version}-%{release}
 Requires(post): docker
 Requires(post): docker-swarm = 1.1.0-3%{?extraver}.gita0fd82b
 Requires(post): flannel
 Requires(post): kubernetes = 1.2.0-0.23%{?extraver}.git4a3f9c5%{dist}
 Requires: %{name}-virt = %{version}-%{release}
-Requires(post): SLOF = 20170724-1%{?extraver}.git685af54%{dist}
-Requires(post): libvirt = 3.6.0-3%{?extraver}.gitdd9401b%{dist}
-Requires(post): qemu = 15:2.10.0-2%{?extraver}.gitc334a4e%{dist}
+Requires(post): SLOF = 20170724-2%{?extraver}.gitea31295%{dist}
+Requires(post): libvirt = 4.0.0-1%{?extraver}.git7418247%{dist}
+Requires(post): qemu = 15:2.11.0-1%{?extraver}.gite7153e0%{dist}
 Requires: %{name}-ras = %{version}-%{release}
 Requires(post): crash
 Requires(post): hwdata = 0.288-3%{?extraver}.git625a119%{dist}
 Requires(post): libnl3 = 3.2.28-6%{?extraver}%{dist}
 Requires(post): libservicelog = 1.1.18-3%{?extraver}.git1e39e77%{dist}
-Requires(post): libvpd = 2.2.5-7%{?extraver}.git767b629%{dist}
+Requires(post): libvpd = 2.2.5-8%{?extraver}.git7d959c5%{dist}
 Requires(post): lshw
-Requires(post): lsvpd = 1.7.8-2%{?extraver}.gitb5542ab%{dist}
-Requires(post): ppc64-diag = 2.7.4-2%{?extraver}.git2e89648%{dist}
-Requires(post): servicelog = 1.1.14-8%{?extraver}.git3955e85%{dist}
+Requires(post): lsvpd = 1.7.8-3%{?extraver}.gitc36b20b%{dist}
+Requires(post): ppc64-diag = 2.7.4-3%{?extraver}.git608507e%{dist}
+Requires(post): servicelog = 1.1.14-9%{?extraver}.git15f2af5%{dist}
 Requires(post): sos
 Requires(post): systemtap = 3.1-5%{?extraver}.git39b62b4%{dist}
 
@@ -87,7 +87,7 @@ Summary: OpenPOWER Host OS basic packages
 
 Requires: %{name}-release = %{version}-%{release}
 
-Requires(post): kernel = 4.13.0-4%{?extraver}.git49564cb%{dist}
+Requires(post): kernel = 4.14.0-1%{?extraver}.git68b4afb%{dist}
 
 Obsoletes: open-power-host-os-virt-management < 3.0-7
 
@@ -100,7 +100,7 @@ Obsoletes: open-power-host-os-virt-management < 3.0-7
 Summary: OpenPOWER Host OS container packages
 
 Requires: %{name}-base = %{version}-%{release}
-Requires(post): kernel = 4.13.0-4%{?extraver}.git49564cb%{dist}
+Requires(post): kernel = 4.14.0-1%{?extraver}.git68b4afb%{dist}
 
 Requires(post): docker
 Requires(post): docker-swarm = 1.1.0-3%{?extraver}.gita0fd82b
@@ -116,11 +116,11 @@ Requires(post): kubernetes = 1.2.0-0.23%{?extraver}.git4a3f9c5%{dist}
 Summary: OpenPOWER Host OS hypervisor packages
 
 Requires: %{name}-base = %{version}-%{release}
-Requires(post): kernel = 4.13.0-4%{?extraver}.git49564cb%{dist}
+Requires(post): kernel = 4.14.0-1%{?extraver}.git68b4afb%{dist}
 
-Requires(post): SLOF = 20170724-1%{?extraver}.git685af54%{dist}
-Requires(post): libvirt = 3.6.0-3%{?extraver}.gitdd9401b%{dist}
-Requires(post): qemu = 15:2.10.0-2%{?extraver}.gitc334a4e%{dist}
+Requires(post): SLOF = 20170724-2%{?extraver}.gitea31295%{dist}
+Requires(post): libvirt = 4.0.0-1%{?extraver}.git7418247%{dist}
+Requires(post): qemu = 15:2.11.0-1%{?extraver}.gite7153e0%{dist}
 
 %description virt
 %{summary}
@@ -131,17 +131,17 @@ Requires(post): qemu = 15:2.10.0-2%{?extraver}.gitc334a4e%{dist}
 Summary: OpenPOWER Host OS RAS (Reliability Availability Serviceability) packages
 
 Requires: %{name}-base = %{version}-%{release}
-Requires(post): kernel = 4.13.0-4%{?extraver}.git49564cb%{dist}
+Requires(post): kernel = 4.14.0-1%{?extraver}.git68b4afb%{dist}
 
 Requires(post): crash
 Requires(post): hwdata = 0.288-3%{?extraver}.git625a119%{dist}
 Requires(post): libnl3 = 3.2.28-6%{?extraver}%{dist}
 Requires(post): libservicelog = 1.1.18-3%{?extraver}.git1e39e77%{dist}
-Requires(post): libvpd = 2.2.5-7%{?extraver}.git767b629%{dist}
+Requires(post): libvpd = 2.2.5-8%{?extraver}.git7d959c5%{dist}
 Requires(post): lshw
-Requires(post): lsvpd = 1.7.8-2%{?extraver}.gitb5542ab%{dist}
-Requires(post): ppc64-diag = 2.7.4-2%{?extraver}.git2e89648%{dist}
-Requires(post): servicelog = 1.1.14-8%{?extraver}.git3955e85%{dist}
+Requires(post): lsvpd = 1.7.8-3%{?extraver}.gitc36b20b%{dist}
+Requires(post): ppc64-diag = 2.7.4-3%{?extraver}.git608507e%{dist}
+Requires(post): servicelog = 1.1.14-9%{?extraver}.git15f2af5%{dist}
 Requires(post): sos
 Requires(post): systemtap = 3.1-5%{?extraver}.git39b62b4%{dist}
 
@@ -210,6 +210,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Sun Jan 21 2018 Builds Bot <bot@email.com> - 3.0-19.alpha
+- Update package dependencies
+
 * Mon Sep 25 2017 Fabiano Rosas <farosas@linux.vnet.ibm.com> - 3.0-18.alpha
 - Update package dependencies
 

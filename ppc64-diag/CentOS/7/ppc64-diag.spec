@@ -4,7 +4,7 @@
 
 Name:           ppc64-diag
 Version:        2.7.4
-Release:        2%{?extraver}%{gitcommittag}%{?dist}
+Release:        3%{?extraver}%{gitcommittag}%{?dist}
 Summary:	PowerLinux Platform Diagnostics
 Group:		System Environment/Base
 License:	GNU General Public License (GPL)
@@ -108,6 +108,9 @@ if [ "$2" = "2" ]; then
 fi
 
 %changelog
+* Tue Jan 23 2018 Builds Bot <bot@email.com> - 2.7.4-3.git
+- Updating to 608507e scripts: Fix service scripts
+
 * Tue Sep 19 2017 Olav Philipp Henschel <olavph@linux.vnet.ibm.com> - 2.7.4-2.git2e89648
 - Bump to update shared object dependencies
 

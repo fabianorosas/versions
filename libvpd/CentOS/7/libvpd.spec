@@ -4,7 +4,7 @@
 
 Name:		libvpd
 Version:	2.2.5
-Release:	7%{?extraver}%{gitcommittag}%{?dist}
+Release:	8%{?extraver}%{gitcommittag}%{?dist}
 Summary:	VPD Database access library for lsvpd
 
 Group:		System Environment/Libraries
@@ -68,6 +68,10 @@ Contains header files for building with libvpd.
 %{_libdir}/pkgconfig/libvpd_cxx-2.pc
 
 %changelog
+* Tue Jan 23 2018 Builds Bot <bot@email.com> - 2.2.5-8.git
+- Updating to 7d959c5 Changes run.vpdupdate creation path from /var/lib/lsvpd to
+  /run
+
 * Fri Aug 25 2017 OpenPOWER Host OS Builds Bot <open-power-host-os-builds-bot@users.noreply.github.com> - 2.2.5-7.git
 - Updating to 767b629 Roll out v2.2.5
 

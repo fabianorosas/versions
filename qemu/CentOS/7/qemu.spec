@@ -944,7 +944,6 @@ rm -rf ${RPM_BUILD_ROOT}%{_sysconfdir}/%{name}/target-x86_64.conf
 
 # Provided by package ipxe
 rm -rf ${RPM_BUILD_ROOT}%{_datadir}/%{name}/pxe*rom
-rm -rf ${RPM_BUILD_ROOT}%{_datadir}/%{name}/efi*rom
 rm -rf ${RPM_BUILD_ROOT}%{_datadir}/%{name}/pxe-eepro100.rom
 rm -rf ${RPM_BUILD_ROOT}%{_datadir}/%{name}/efi-eepro100.rom
 # Provided by package seavgabios
@@ -1491,6 +1490,13 @@ getent passwd qemu >/dev/null || \
 %{_datadir}/%{name}/hppa-firmware.img
 %{_datadir}/%{name}/ppc_rom.bin
 %{_datadir}/%{name}/spapr-rtas.bin
+%{_datadir}/%{name}/efi-e1000.rom
+%{_datadir}/%{name}/efi-e1000e.rom
+%{_datadir}/%{name}/efi-vmxnet3.rom
+%{_datadir}/%{name}/efi-virtio.rom
+%{_datadir}/%{name}/efi-pcnet.rom
+%{_datadir}/%{name}/efi-rtl8139.rom
+%{_datadir}/%{name}/efi-ne2k_pci.rom
 #{_datadir}/%{name}/openbios-ppc
 #{_datadir}/%{name}/slof.bin
 %{_datadir}/%{name}/u-boot.e500
